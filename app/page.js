@@ -8,6 +8,8 @@ import { Input } from "@/components/ui/input"
 import { Code, Globe, Users } from "lucide-react"
 import Link from "next/link"
 
+import MemberCard from "@/app/MemberCard"
+
 export default function Component() {
   return (
     <div className="flex flex-col min-h-screen">
@@ -64,6 +66,7 @@ export default function Component() {
               </Card>
             </div>
           </div>
+          <MemberCard></MemberCard>
         </section>
         <section id="events" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6 mx-auto">
