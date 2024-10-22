@@ -4,6 +4,17 @@
 
 ---
 
+Getting Started:
+
+In your IDE, after opening a folder-
+
+<code>
+git clone https://github.com/cloudflips32/se-club.git
+npm i -g npm@latest
+</code>
+
+---
+
 10/09/2024 Initial Commit- Boilerplate for SE Club website.
 
 ![page-preview-first-commit](/public/images/se-club-preview-1.png)
