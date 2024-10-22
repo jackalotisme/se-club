@@ -6,7 +6,7 @@
 
 Getting Started:
 
-In your IDE, after opening a folder-
+In your IDE, after opening a new folder-
 
 
 ``git clone https://github.com/cloudflips32/se-club.git`` \
