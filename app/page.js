@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
+import { NameField } from "@/components/ui/nameField";
 import { Code, Globe, Users } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
@@ -136,7 +137,7 @@ export default function Component() {
               </div>
               <div className="w-full max-w-sm space-y-2">
                 <form className="flex flex-col space-y-4">
-                  <Input placeholder="Your Name" type="text" required/>
+                  <NameField placeholder="Your Name" required></NameField>
                   <Input placeholder="Your Email" type="email" required />
                   <Button type="submit">Sign Up</Button>
                 </form>
