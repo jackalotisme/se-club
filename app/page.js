@@ -136,8 +136,8 @@ export default function Component() {
               </div>
               <div className="w-full max-w-sm space-y-2">
                 <form className="flex flex-col space-y-4">
-                  <Input placeholder="Your Name" type="text" />
-                  <Input placeholder="Your Email" type="email" />
+                  <Input placeholder="Your Name" type="text" required/>
+                  <Input placeholder="Your Email" type="email" required />
                   <Button type="submit">Sign Up</Button>
                 </form>
               </div>
