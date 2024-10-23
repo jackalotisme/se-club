@@ -2,7 +2,7 @@ import * as React from "react"
 
 import { cn } from "@/lib/utils"
 
-const NameField = React.forwardRef(({ className, ...props }, ref) => {
+const NameField = React.forwardRef(({ className, placeholder }, ref) => {
     return (
         (<input
           type="text"
@@ -11,7 +11,8 @@ const NameField = React.forwardRef(({ className, ...props }, ref) => {
             className
           )}
           ref={ref}
-          {...props} />)
+          placeholder={placeholder}
+          onChange={Validate()} />)
     );
 })
 
