@@ -2,6 +2,10 @@ import * as React from "react"
 
 import { cn } from "@/lib/utils"
 
+function Validate () {
+    console.log("hi");
+    
+}
 const NameField = React.forwardRef(({ className, placeholder }, ref) => {
     return (
         (<input
