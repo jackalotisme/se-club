@@ -1,12 +1,15 @@
 import * as React from "react"
 
 import { cn } from "@/lib/utils"
-import { useRef } from "react";
-function Validate () {
-    console.log("hi");
-    
-}
+import { useState } from "react";
+import { Input } from "postcss";
+
 const NameField = React.forwardRef(({ className, placeholder }, ref) => {
+    const [getText, setText]= useState("");
+    function handleChange (e) {
+        setText({value: e.target.value});
+        console.log(getText);
+    }
     return (
         (<input
           type="text"
@@ -16,7 +19,7 @@ const NameField = React.forwardRef(({ className, placeholder }, ref) => {
           )}
           ref={ref}
           placeholder={placeholder}
-          onChange={Validate()} />)
+          onChange={handleChange} />)
     );
 })
 
