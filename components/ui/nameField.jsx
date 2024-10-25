@@ -9,7 +9,18 @@ const NameField = React.forwardRef(({ className, placeholder }, ref) => {
          *  any numbers
          * special characters, ie: ! @ #"
          */
-        
+        let count = 0;
+        let containsNonvalidChar = false;
+        let keepGoing = true;
+        while(containsNonvalidChar == false && keepGoing == true)
+        {
+            
+            
+        }
+        if(containsNonvalidChar)
+        {
+            console.log("invalid character fix that!");
+        }
     }
     function handleChange (e) {
         let text = e.target.value;
