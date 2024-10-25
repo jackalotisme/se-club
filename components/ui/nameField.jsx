@@ -14,8 +14,19 @@ const NameField = React.forwardRef(({ className, placeholder }, ref) => {
         let keepGoing = true;
         while(containsNonvalidChar == false && keepGoing == true)
         {
-            
-            
+            if(parseInt(text[count]) >= 0 || text.length == 0)
+                {
+                    containsNonvalidChar = true;
+                }
+                else
+                {
+                    
+                }   
+                if(count > text.length)
+                {
+                    keepGoing = false;
+                }
+                count++;
         }
         if(containsNonvalidChar)
         {
