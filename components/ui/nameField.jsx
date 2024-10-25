@@ -1,14 +1,13 @@
 import * as React from "react"
 
 import { cn } from "@/lib/utils"
-import { useState } from "react";
-import { Input } from "postcss";
+import { Input, stringify } from "postcss";
 
 const NameField = React.forwardRef(({ className, placeholder }, ref) => {
-    const [getText, setText]= useState("");
+    
     function handleChange (e) {
-        setText({value: e.target.value});
-        console.log(getText);
+        let text = e.target.value;
+        validateText(text);
     }
     return (
         (<input
