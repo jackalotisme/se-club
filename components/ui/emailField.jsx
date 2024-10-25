@@ -54,12 +54,25 @@ const EmailField = React.forwardRef(({ className, placeholder }, ref) => {
         }
         return containsNonvalidChar;
     }
+    function checkValidName(text) {
+        switch (text) {
+            case "":
+                break;
+            default:
+                break;
+        }
+    }
     function validateText(text) {
         let result = checkInvalidCharacters(text);
         if (result == false) {
             //source for email list, this is before the @ sign 
             //https://ladedu.com/valid-characters-for-email-addresses-the-complete-list/#Characters-Special-Characters-and-Symbols-Allowed-in-an-Email-Address
             let test = text.split("@");
+            console.log(test);
+            result = checkValidName(test[0]);
+            if (result == true) {
+                console.log("its valid")
+            }
         }
     }
     function handleChange(e) {
