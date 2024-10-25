@@ -2,6 +2,7 @@ import * as React from "react"
 
 import { cn } from "@/lib/utils"
 import { Input, stringify } from "postcss";
+import { split } from "postcss/lib/list";
 
 const EmailField = React.forwardRef(({ className, placeholder }, ref) => {
     function checkInvalidCharacters(text) {
@@ -55,7 +56,11 @@ const EmailField = React.forwardRef(({ className, placeholder }, ref) => {
     }
     function validateText(text) {
         let result = checkInvalidCharacters(text);
-
+        if (result == false) {
+            //source for email list, this is before the @ sign 
+            //https://ladedu.com/valid-characters-for-email-addresses-the-complete-list/#Characters-Special-Characters-and-Symbols-Allowed-in-an-Email-Address
+            let test = text.split("@");
+        }
     }
     function handleChange(e) {
         let text = e.target.value;
