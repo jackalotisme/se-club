@@ -7,6 +7,7 @@ import { NameField } from "@/components/ui/nameField";
 import { Code, Globe, Users } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+import { EmailField } from "@/components/ui/emailField";
 
 export default function Component() {
   return (
@@ -138,7 +139,7 @@ export default function Component() {
               <div className="w-full max-w-sm space-y-2">
                 <form className="flex flex-col space-y-4">
                   <NameField placeholder="Your Name" required></NameField>
-                  <Input placeholder="Your Email" type="email" required />
+                  <EmailField placeholder="Your Email" required></EmailField>
                   <Button type="submit">Sign Up</Button>
                 </form>
               </div>
