@@ -5,7 +5,7 @@ import { Input, stringify } from "postcss";
 
 const EmailField = React.forwardRef(({ className, placeholder }, ref) => {
     function validateText(text) {
-        /*, Less strict than name, whats not allowed should be:
+        /*, Less strict than name, whats allowed should be:
             special characters: ! _ =  except @ 
             One @ symbol: @gmail.com
          */
