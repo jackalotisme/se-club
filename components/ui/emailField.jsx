@@ -4,11 +4,11 @@ import { cn } from "@/lib/utils"
 import { Input, stringify } from "postcss";
 
 const EmailField = React.forwardRef(({ className, placeholder }, ref) => {
-    function validateText(text) {
+    function checkInvalidCharacters(text) {
         /*, Less strict than name, whats allowed should be:
-            special characters: ! _ =  except @ 
-            One @ symbol: @gmail.com
-         */
+    special characters: ! _ =  except @ 
+    One @ symbol: @gmail.com
+    */
         let count = 0;
         let containsNonvalidChar = false;
         let keepGoing = true;
@@ -49,7 +49,13 @@ const EmailField = React.forwardRef(({ className, placeholder }, ref) => {
         }
         if (containsNonvalidChar) {
             console.log("invalid character fix that!");
+
         }
+        return containsNonvalidChar;
+    }
+    function validateText(text) {
+        let result = checkInvalidCharacters(text);
+
     }
     function handleChange(e) {
         let text = e.target.value;
