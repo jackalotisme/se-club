@@ -4,7 +4,13 @@ import { cn } from "@/lib/utils"
 import { Input, stringify } from "postcss";
 
 const NameField = React.forwardRef(({ className, placeholder }, ref) => {
-    
+    function validateText (text) {
+        /*Only text, does not contain
+         *  any numbers
+         * special characters, ie: ! @ #"
+         */
+        
+    }
     function handleChange (e) {
         let text = e.target.value;
         validateText(text);
