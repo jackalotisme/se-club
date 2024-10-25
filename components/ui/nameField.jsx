@@ -20,7 +20,42 @@ const NameField = React.forwardRef(({ className, placeholder }, ref) => {
                 }
                 else
                 {
-                    
+                    switch(text[count])
+                    {
+                        case"`":
+                        case"~":
+                        case"!":
+                        case"@":
+                        case"#":
+                        case"$":
+                        case"%":
+                        case"^":
+                        case"&":
+                        case"*":
+                        case"(":
+                        case")":
+                        case"-":
+                        case"_":
+                        case"+":
+                        case"=":
+                        case"{":
+                        case"[":
+                        case"}":
+                        case"]":
+                        case"\\":
+                        case"|":
+                        case":":
+                        case";":
+                        case'"':
+                        case"'":
+                        case"?":
+                        case"/":
+                        case">":
+                        case"<":
+                        case",":
+                        case".":
+                        containsNonvalidChar = true;
+                    }
                 }   
                 if(count > text.length)
                 {
