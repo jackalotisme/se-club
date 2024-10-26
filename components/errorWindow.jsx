@@ -4,7 +4,10 @@ import { cn } from "@/lib/utils"
 import { Input, stringify } from "postcss";
 
 const ErrorWindow = React.forwardRef(({ ErrorTitle, ErrorDescription }, ref) => {
-
+    function DisableAlert(e) {
+        let element = e.target.parentElement.parentElement;
+        element.remove();
+    }
     return (
         (
             <div class="bg-red-100 border-red-400 border-radius: 15px text-red-700 px-4 py-3 rounded relative" role="alert">
