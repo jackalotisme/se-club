@@ -241,6 +241,12 @@ const EmailField = React.forwardRef(({ className, placeholder }, ref) => {
             //https://ladedu.com/valid-characters-for-email-addresses-the-complete-list/#Characters-Special-Characters-and-Symbols-Allowed-in-an-Email-Address
             let test = text.split("@");
             console.log(test);
+            let count = 0;
+            let element = test[0];
+            while (result === true && count < text[0].length) {
+                result = checkValidName(element[count]);
+                count++;
+            }
             if (result == true) {
                 console.log("its valid")
             }
