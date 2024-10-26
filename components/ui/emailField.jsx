@@ -56,7 +56,7 @@ const EmailField = React.forwardRef(({ className, placeholder }, ref) => {
     }
     function checkValidName(text) {
         let valid = false;
-        switch (text) {
+        switch (text.toLowerCase()) {
             case "a":
                 valid = true;
                 break;
@@ -232,8 +232,8 @@ const EmailField = React.forwardRef(({ className, placeholder }, ref) => {
                 valid = false;
                 break;
         }
+        return valid;
     }
-}
     function validateText(text) {
         let result = checkInvalidCharacters(text);
         if (result == false) {
@@ -243,12 +243,12 @@ const EmailField = React.forwardRef(({ className, placeholder }, ref) => {
             console.log(test);
             let count = 0;
             let element = test[0];
-            while (result === true && count < text[0].length) {
+            do {
                 result = checkValidName(element[count]);
                 count++;
-            }
+            } while (result === true && count < text[0].length);
             if (result == true) {
-                console.log("its valid")
+                console.log("Valid Email Name")
             }
         }
     }
@@ -257,16 +257,16 @@ const EmailField = React.forwardRef(({ className, placeholder }, ref) => {
         validateText(text);
     }
     return (
-    (<input
-        type="email"
-        className={cn(
-            "flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50",
-            className
-        )}
-        ref={ref}
-        placeholder={placeholder}
-        onChange={handleChange} />)
-);
+        (<input
+            type="email"
+            className={cn(
+                "flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50",
+                className
+            )}
+            ref={ref}
+            placeholder={placeholder}
+            onChange={handleChange} />)
+    );
 })
 
 export { EmailField }
