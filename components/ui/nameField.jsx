@@ -2,8 +2,12 @@ import * as React from "react"
 
 import { cn } from "@/lib/utils"
 import { Input, stringify } from "postcss";
+import { ErrorWindow } from "../errorWindow";
+import { useState } from "react";
 
 const NameField = React.forwardRef(({ className, placeholder }, ref) => {
+    const [errorType, setErrorType] = useState("");
+    const [errorDescription, setErrorDescription] = useState("");
     function validateText(text) {
         /*Only text, does not contain
          *  any numbers
@@ -59,7 +63,19 @@ const NameField = React.forwardRef(({ className, placeholder }, ref) => {
             count++;
         }
         if (containsNonvalidChar) {
-            console.log("invalid character fix that!");
+            if (text.length > 0) {
+                setErrorType("Invalid character")
+                setErrorDescription("You have a character in your name thats invalid, may want to fix that.")
+            }
+            else {
+                setErrorType("Required")
+                // mixed on this message, how to make it not creepy but welcoming?
+                setErrorDescription("Your name is required");
+            }
+        }
+        else {
+            setErrorType("")
+            setErrorDescription("");
         }
     }
     function handleChange(e) {
@@ -67,7 +83,7 @@ const NameField = React.forwardRef(({ className, placeholder }, ref) => {
         validateText(text);
     }
     return (
-        (<input
+        (<><input
             type="text"
             className={cn(
                 "flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50",
@@ -75,7 +91,11 @@ const NameField = React.forwardRef(({ className, placeholder }, ref) => {
             )}
             ref={ref}
             placeholder={placeholder}
-            onChange={handleChange} />)
+            onChange={handleChange} />
+            <ErrorWindow ErrorTitle={errorType}
+                ErrorDescription={errorDescription}
+            ></ErrorWindow>
+        </>)
     );
 })
 

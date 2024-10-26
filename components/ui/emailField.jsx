@@ -3,8 +3,11 @@ import * as React from "react"
 import { cn } from "@/lib/utils"
 import { Input, stringify } from "postcss";
 import { split } from "postcss/lib/list";
-
+import { ErrorWindow } from "../errorWindow";
+import { useState } from "react";
 const EmailField = React.forwardRef(({ className, placeholder }, ref) => {
+    const [errorType, setErrorType] = useState("");
+    const [errorDescription, setErrorDescription] = useState("");
     function checkInvalidCharacters(text) {
         /*, Less strict than name, whats allowed should be:
     special characters: ! _ =  except @ 
@@ -250,14 +253,22 @@ const EmailField = React.forwardRef(({ className, placeholder }, ref) => {
                 } while (result === true && count < text[0].length);
                 if (result == true) {
                     console.log("Valid Email Name")
+                    setErrorDescription("");
+                    setErrorType("");
                 }
                 else {
-                    console.log("Invalid email Name");
+                    setErrorDescription("Invalid Email Name, please check your email.");
+                    setErrorType("Invalid Email Name");
                 }
+            }
+            else {
+                setErrorDescription("Invalid characters, please check your email.");
+                setErrorType("Invalid Characters");
             }
         }
         else {
-            console.log("Not long enough");
+            setErrorType("Length")
+            setErrorDescription("Please type out the rest of the email, or try another email");
         }
     }
     function handleChange(e) {
@@ -265,7 +276,7 @@ const EmailField = React.forwardRef(({ className, placeholder }, ref) => {
         validateText(text);
     }
     return (
-        (<input
+        (<><input
             type="email"
             className={cn(
                 "flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50",
@@ -273,7 +284,11 @@ const EmailField = React.forwardRef(({ className, placeholder }, ref) => {
             )}
             ref={ref}
             placeholder={placeholder}
-            onChange={handleChange} />)
+            onChange={handleChange} />
+            <ErrorWindow ErrorTitle={errorType}
+                ErrorDescription={errorDescription}></ErrorWindow>
+        </>
+        )
     );
 })
 
