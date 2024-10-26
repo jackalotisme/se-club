@@ -14,6 +14,7 @@ import { Code, Globe, Users } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { EmailField } from "@/components/ui/emailField";
+import { ErrorWindow } from "@/components/errorWindow";
 
 export default function Component() {
   return (
@@ -191,6 +192,12 @@ export default function Component() {
                   <Button type="submit" id="SignUp">
                     Sign Up
                   </Button>
+                  <ErrorWindow
+                    ErrorTitle={"Invalid Character!"}
+                    ErrorDescription={
+                      "You have an invalid character in your email!"
+                    }
+                  ></ErrorWindow>
                 </form>
               </div>
             </div>
