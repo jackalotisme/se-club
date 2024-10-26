@@ -3,8 +3,11 @@ import * as React from "react"
 import { cn } from "@/lib/utils"
 import { Input, stringify } from "postcss";
 import { ErrorWindow } from "../errorWindow";
+import { useState } from "react";
 
 const NameField = React.forwardRef(({ className, placeholder }, ref) => {
+    const [errorType, setErrorType] = useState("");
+    const [errorDescription, setErrorDescription] = useState("");
     function validateText(text) {
         /*Only text, does not contain
          *  any numbers
