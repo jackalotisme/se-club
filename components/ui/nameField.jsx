@@ -2,6 +2,7 @@ import * as React from "react"
 
 import { cn } from "@/lib/utils"
 import { Input, stringify } from "postcss";
+import { ErrorWindow } from "../errorWindow";
 
 const NameField = React.forwardRef(({ className, placeholder }, ref) => {
     function validateText(text) {
