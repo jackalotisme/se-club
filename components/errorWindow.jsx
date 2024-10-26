@@ -10,7 +10,7 @@ const ErrorWindow = React.forwardRef(({ ErrorTitle, ErrorDescription }, ref) => 
     }
     return (
         (
-            <div class="bg-red-100 border-red-400 border-radius: 15px text-red-700 px-4 py-3 rounded relative" role="alert">
+            <div class=" align-items: center bg-red-100 border-red-400 border-radius: 15px text-red-700 px-4 py-3 rounded relative" role="alert">
                 <strong class="font-bold">{ErrorTitle}</strong>
                 <span class="block sm:inline">{ErrorDescription}</span>
                 <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
