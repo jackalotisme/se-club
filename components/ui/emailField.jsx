@@ -257,14 +257,18 @@ const EmailField = React.forwardRef(({ className, placeholder }, ref) => {
                     setErrorType("");
                 }
                 else {
-                    console.log("Invalid email Name");
                     setErrorDescription("Invalid Email Name, please check your email.");
                     setErrorType("Invalid Email Name");
                 }
             }
+            else {
+                setErrorDescription("Invalid characters, please check your email.");
+                setErrorType("Invalid Characters");
+            }
         }
         else {
-            console.log("Not long enough");
+            setErrorType("Length")
+            setErrorDescription("Please type out the rest of the email, or try another email");
         }
     }
     function handleChange(e) {
