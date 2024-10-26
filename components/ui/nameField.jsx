@@ -63,7 +63,8 @@ const NameField = React.forwardRef(({ className, placeholder }, ref) => {
             count++;
         }
         if (containsNonvalidChar) {
-            console.log("invalid character fix that!");
+            errorType("Invalid character")
+            errorDescription("You have a character in your name thats invalid, may want to fix that.")
         }
     }
     function handleChange(e) {
