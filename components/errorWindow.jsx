@@ -7,7 +7,6 @@ const ErrorWindow = React.forwardRef(({ className, placeholder }, ref) => {
 
     function handleChange(e) {
         let text = e.target.value;
-        validateText(text);
     }
     return (
         (<input
