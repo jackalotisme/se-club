@@ -251,7 +251,13 @@ const EmailField = React.forwardRef(({ className, placeholder }, ref) => {
                 if (result == true) {
                     console.log("Valid Email Name")
                 }
+                else {
+                    console.log("Invalid email Name");
+                }
             }
+        }
+        else {
+            console.log("Not long enough");
         }
     }
     function handleChange(e) {
