@@ -63,8 +63,15 @@ const NameField = React.forwardRef(({ className, placeholder }, ref) => {
             count++;
         }
         if (containsNonvalidChar) {
-            setErrorType("Invalid character")
-            setErrorDescription("You have a character in your name thats invalid, may want to fix that.")
+            if (text.length > 0) {
+                setErrorType("Invalid character")
+                setErrorDescription("You have a character in your name thats invalid, may want to fix that.")
+            }
+            else {
+                setErrorType("Required")
+                // mixed on this message, how to make it not creepy but welcoming?
+                setErrorDescription("Your name is required");
+            }
         }
         else {
             setErrorType("")
