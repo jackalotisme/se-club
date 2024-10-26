@@ -7,6 +7,7 @@ import { ErrorWindow } from "../errorWindow";
 import { useState } from "react";
 const EmailField = React.forwardRef(({ className, placeholder }, ref) => {
     const [errorType, setErrorType] = useState("");
+    const [errorDescription, setErrorDescription] = useState("");
     function checkInvalidCharacters(text) {
         /*, Less strict than name, whats allowed should be:
     special characters: ! _ =  except @ 
