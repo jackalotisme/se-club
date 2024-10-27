@@ -25,3 +25,5 @@ npm i -g npm@latest
 Name and Email Validation Added
 
 ![first-club-PR-merge](/public/images/se-club-contribution-one.png)
+
+---
