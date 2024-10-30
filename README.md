@@ -22,7 +22,7 @@ npm i -g npm@latest
 ---
 
 10/26/2024 Form Section-
-@jackalotisme Name and Email Validation Added
+[@jackalotisme](https://github.com/jackalotisme) Name and Email Validation Added
 
 ![first-club-PR-merge](/public/images/se-club-contribution-one.png)
 
