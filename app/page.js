@@ -9,10 +9,10 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { NameField } from "@/components/ui/nameField";
 import { Code, Globe, Users } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { NameField } from "@/components/ui/nameField";
 import { EmailField } from "@/components/ui/emailField";
 
 export default function Component() {

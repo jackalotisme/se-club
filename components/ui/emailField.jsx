@@ -3,7 +3,7 @@ import * as React from "react"
 import { cn } from "@/lib/utils"
 import { Input, stringify } from "postcss";
 import { split } from "postcss/lib/list";
-import { ErrorWindow } from "../errorWindow";
+import { ErrorWindow } from "./errorWindow";
 import { useState } from "react";
 const EmailField = React.forwardRef(({ className, placeholder }, ref) => {
     const [errorType, setErrorType] = useState("");
