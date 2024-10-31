@@ -1,5 +1,6 @@
 "use client";
 
+import About from "@/components/ui/about";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -8,13 +9,10 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Code, Globe, Users } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { NameField } from "@/components/ui/nameField";
 import { EmailField } from "@/components/ui/emailField";
-import About from "@/components/ui/about";
 
 export default function Component() {
   return (

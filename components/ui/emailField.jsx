@@ -1,10 +1,10 @@
 import * as React from "react"
 
 import { cn } from "@/lib/utils"
-import { Input, stringify } from "postcss";
-import { split } from "postcss/lib/list";
+import { Input } from "@/components/ui/input";
 import { ErrorWindow } from "./errorWindow";
 import { useState } from "react";
+
 const EmailField = React.forwardRef(({ className, placeholder }, ref) => {
     const [errorType, setErrorType] = useState("");
     const [errorDescription, setErrorDescription] = useState("");
@@ -276,7 +276,7 @@ const EmailField = React.forwardRef(({ className, placeholder }, ref) => {
         validateText(text);
     }
     return (
-        (<><input
+        (<><Input
             type="email"
             className={cn(
                 "flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50",

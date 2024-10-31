@@ -1,8 +1,8 @@
 import * as React from "react"
 
 import { cn } from "@/lib/utils"
-import { Input, stringify } from "postcss";
 import { ErrorWindow } from "./errorWindow";
+import { Input } from "@/components/ui/input";
 import { useState } from "react";
 
 const NameField = React.forwardRef(({ className, placeholder }, ref) => {
@@ -83,7 +83,7 @@ const NameField = React.forwardRef(({ className, placeholder }, ref) => {
         validateText(text);
     }
     return (
-        (<><input
+        (<><Input
             type="text"
             className={cn(
                 "flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50",
