@@ -14,6 +14,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { NameField } from "@/components/ui/nameField";
 import { EmailField } from "@/components/ui/emailField";
+import About from "@/components/ui/about";
 
 export default function Component() {
   return (
@@ -52,7 +53,7 @@ export default function Component() {
         </nav>
       </header>
       <main className="flex-1 bg-gradient-to-tr from-sky-500 to-violet-700">
-        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
+        <section id="hero" className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
@@ -73,54 +74,7 @@ export default function Component() {
             </div>
           </div>
         </section>
-        <section
-          id="about"
-          className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800"
-        >
-          <div className="container px-4 md:px-6 mx-auto">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8">
-              About Us
-            </h2>
-            <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-3">
-              <Card>
-                <CardHeader>
-                  <Code className="h-8 w-8 mb-2" />
-                  <CardTitle>Skill Development</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p>
-                    Enhance your coding skills through workshops, hackathons,
-                    and collaborative projects.
-                  </p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <Users className="h-8 w-8 mb-2" />
-                  <CardTitle>Networking</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p>
-                    Connect with like-minded individuals and industry
-                    professionals to expand your network.
-                  </p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <Globe className="h-8 w-8 mb-2" />
-                  <CardTitle>Industry Exposure</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p>
-                    Gain insights into the latest trends and technologies
-                    shaping the software engineering landscape.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
+        <About />
         <section id="events" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6 mx-auto">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center text-white mb-8">
