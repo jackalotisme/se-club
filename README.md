@@ -7,7 +7,6 @@
 Getting Started:
 
 In your IDE, after opening a folder-
-
 <code>
 git clone https://github.com/cloudflips32/se-club.git
 npm i -g npm@latest
