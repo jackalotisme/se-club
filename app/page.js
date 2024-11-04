@@ -121,20 +121,60 @@ export default function Component() {
             </div>
           </div>
         </section>
-        <section id="testimonials" className="w-full py-12 md:py-24 lg:py-32">
-          { /* TESTIMONIALS */ }
-        </section>
         <section
-          id="join"
+          id="about"
           className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800"
         >
+        <div id="testimonials" className="container px-4 md:px-6 mx-auto">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center text-black mb-8">
+              Hear What Members Have To Say
+            </h2>
+            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+              <Card>
+                <CardHeader>
+                  <CardTitle>Melissa E</CardTitle>
+                  <CardDescription>
+                    Vice President, SE Club
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p>"There's no better feeling than being part of a community that supports and encourages you to grow."</p>
+
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle>Zachariah H</CardTitle>
+                  <CardDescription>
+                    Member, SE Club
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p>"Has been a great experience! The club has helped me grow as a developer and connect with like-minded individuals."</p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle>Christopher G</CardTitle>
+                  <CardDescription>
+                    Secretary, SE Club
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p>"I have learned so much from the club and have made some amazing friends along the way."</p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+        <section id="join" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                <h2 className="text-3xl font-bold text-white tracking-tighter sm:text-4xl md:text-5xl">
                   Join Software Engineering Club
                 </h2>
-                <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
+                <p className="mx-auto max-w-[600px] text-white md:text-xl dark:text-gray-400">
                   Be part of a community that's shaping the future of software
                   engineering.
                 </p>
