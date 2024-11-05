@@ -25,34 +25,34 @@ export default function Component() {
             height={64}
             alt="School Logo"
           />
-          <span className="ml-2 text-lg font-bold">
+          <span className="hidden md:inline-block lg:inline-block text-lg ml-2 font-bold">
             Software Engineering Club
           </span>
         </Link>
-        <nav className="ml-auto flex gap-4 sm:gap-6">
+        <nav className="ml-auto flex gap-4 sm:gap-6 md:gap-8">
           <Link
-            className="text-md font-medium hover:underline underline-offset-4"
+            className="text-lg font-medium hover:underline underline-offset-4"
             href="#about"
           >
             About
           </Link>
           <Link
-            className="text-md font-medium hover:underline underline-offset-4"
+            className="text-lg font-medium hover:underline underline-offset-4"
             href="#events"
           >
             Events
           </Link>
           <Link
-            className="text-md font-medium hover:underline underline-offset-4"
+            className="text-lg font-medium hover:underline underline-offset-4"
             href="#testimonials"
           >
             Testimonials
           </Link>
           <Link
-            className="text-md font-medium hover:underline underline-offset-4"
+            className="text-lg font-medium hover:underline underline-offset-4"
             href="#join"
           >
-            Join Us
+            Join
           </Link>
         </nav>
       </header>
