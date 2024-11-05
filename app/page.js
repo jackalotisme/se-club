@@ -125,7 +125,7 @@ export default function Component() {
           id="about"
           className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800"
         >
-        <div id="testimonials" className="container px-4 md:px-6 mx-auto">
+          <div id="testimonials" className="container px-4 md:px-6 mx-auto">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center text-black mb-8">
               Hear What Members Have To Say
             </h2>
@@ -133,35 +133,37 @@ export default function Component() {
               <Card>
                 <CardHeader>
                   <CardTitle>Melissa E</CardTitle>
-                  <CardDescription>
-                    Vice President, SE Club
-                  </CardDescription>
+                  <CardDescription>Vice President, SE Club</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <p>"There's no better feeling than being part of a community that supports and encourages you to grow."</p>
-
+                  <p>
+                    "There's no better feeling than being part of a community
+                    that supports and encourages you to grow."
+                  </p>
                 </CardContent>
               </Card>
               <Card>
                 <CardHeader>
                   <CardTitle>Zachariah H</CardTitle>
-                  <CardDescription>
-                    Member, SE Club
-                  </CardDescription>
+                  <CardDescription>Member, SE Club</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <p>"Has been a great experience! The club has helped me grow as a developer and connect with like-minded individuals."</p>
+                  <p>
+                    "Has been a great experience! The club has helped me grow as
+                    a developer and connect with like-minded individuals."
+                  </p>
                 </CardContent>
               </Card>
               <Card>
                 <CardHeader>
                   <CardTitle>Christopher G</CardTitle>
-                  <CardDescription>
-                    Secretary, SE Club
-                  </CardDescription>
+                  <CardDescription>Secretary, SE Club</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <p>"I have learned so much from the club and have made some amazing friends along the way."</p>
+                  <p>
+                    "I have learned so much from the club and have made some
+                    amazing friends along the way."
+                  </p>
                 </CardContent>
               </Card>
             </div>
