@@ -5,7 +5,7 @@ import { ErrorWindow } from "./errorWindow";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
 
-const NameField = React.forwardRef(({ className, placeholder }, ref) => {
+const NameField = React.forwardRef(({ className, placeholder, changeParentState }, ref) => {
     const [errorType, setErrorType] = useState("");
     const [errorDescription, setErrorDescription] = useState("");
     function validateText(text) {
@@ -66,16 +66,19 @@ const NameField = React.forwardRef(({ className, placeholder }, ref) => {
             if (text.length > 0) {
                 setErrorType("Invalid character")
                 setErrorDescription("You have a character in your name thats invalid, may want to fix that.")
+                changeParentState(false);
             }
             else {
                 setErrorType("Required")
                 // mixed on this message, how to make it not creepy but welcoming?
                 setErrorDescription("Your name is required");
+                changeParentState(false);
             }
         }
         else {
             setErrorType("")
             setErrorDescription("");
+            changeParentState(true);
         }
     }
     function handleChange(e) {
