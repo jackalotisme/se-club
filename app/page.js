@@ -44,6 +44,12 @@ export default function Component() {
           </Link>
           <Link
             className="text-md font-medium hover:underline underline-offset-4"
+            href="#testimonials"
+          >
+            Testimonials
+          </Link>
+          <Link
+            className="text-md font-medium hover:underline underline-offset-4"
             href="#join"
           >
             Join Us
