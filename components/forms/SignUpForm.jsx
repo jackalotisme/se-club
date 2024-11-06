@@ -5,7 +5,7 @@ import { NameField } from "../ui/nameField";
 import { EmailField } from "../ui/emailField";
 import { Button } from "../ui/button";
 
-const SignUpForm = React.forwardRef((ref) => {
+const SignUpForm = React.forwardRef((placeHolder, ref) => {
     const { getValidForm, setValidForm } = useState(false);
     function changeState(TrueOrFalse) {
         if (TrueOrFalse === true) {
