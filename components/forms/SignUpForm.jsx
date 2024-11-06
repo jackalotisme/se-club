@@ -3,6 +3,14 @@ import { useState } from "react";
 import { cn } from "@/lib/utils"
 
 const SignUpForm = React.forwardRef((ref) => {
+    const { getValidForm, setValidForm } = useState(false);
+    function changeState(TrueOrFalse) {
+        if (TrueOrFalse === true) {
+            setValidForm === false;
+        } else {
+            setValidForm === true;
+        }
+    }
     return (
         (<div className="w-full max-w-sm space-y-2">
             <form className="flex flex-col space-y-4">
