@@ -15,3 +15,13 @@
                     </Button>
                   </form>
                 </div> */
+
+import * as React from "react";
+
+import { cn } from "@/lib/utils"
+
+const SignUpForm = React.forwardRef(({ className, ...props }, ref)) {
+    //return("");
+}
+
+export { SignUpForm }
