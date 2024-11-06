@@ -29,7 +29,7 @@ export default function Component() {
             Software Engineering Club
           </span>
         </Link>
-        <nav className="ml-auto flex gap-4 sm:gap-6 md:gap-8">
+        <nav className="ml-auto flex flex-row items-center gap-4 sm:gap-6 md:gap-8">
           <Link
             className="text-lg font-medium hover:underline underline-offset-4"
             href="#about"
