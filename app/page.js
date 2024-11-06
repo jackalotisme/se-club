@@ -13,18 +13,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { NameField } from "@/components/ui/nameField";
 import { EmailField } from "@/components/ui/emailField";
-import { useState } from "react";
 import { SignUpForm } from "@/components/forms/SignUpForm";
 
 export default function Component() {
-  const { getValidForm, setValidForm } = useState(false);
-  function changeState(TrueOrFalse) {
-    if (TrueOrFalse === true) {
-      setValidForm === false;
-    } else {
-      setValidForm === true;
-    }
-  }
   if (getValidForm === true) {
     return (
       <div className="flex flex-col min-h-screen">
