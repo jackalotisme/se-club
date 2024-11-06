@@ -14,6 +14,7 @@ import Image from "next/image";
 import { NameField } from "@/components/ui/nameField";
 import { EmailField } from "@/components/ui/emailField";
 import { useState } from "react";
+import { SignUpForm } from "@/components/forms/SignUpForm";
 
 export default function Component() {
   const { getValidForm, setValidForm } = useState(false);
