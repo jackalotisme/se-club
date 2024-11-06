@@ -2,9 +2,6 @@ import * as React from "react"
 
 import { cn } from "@/lib/utils"
 
-function handleChange() {
-    console.log("click");
-}
 const Input = React.forwardRef(({ className, type }, ref) => {
     return (
         (<input
@@ -14,7 +11,6 @@ const Input = React.forwardRef(({ className, type }, ref) => {
                 className
             )}
             ref={ref}
-            onChange={handleChange()}
         />)
     );
 })
