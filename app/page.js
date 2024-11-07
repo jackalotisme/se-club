@@ -9,8 +9,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
+import Testimonials from "@/components/ui/testimonials";
 import { NameField } from "@/components/ui/nameField";
 import { EmailField } from "@/components/ui/emailField";
 
@@ -127,52 +128,7 @@ export default function Component() {
             </div>
           </div>
         </section>
-        <section
-          id="about"
-          className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800"
-        >
-        <div id="testimonials" className="container px-4 md:px-6 mx-auto">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center text-black mb-8">
-              Hear What Members Have To Say
-            </h2>
-            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Melissa E</CardTitle>
-                  <CardDescription>
-                    Vice President, SE Club
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p>"There's no better feeling than being part of a community that supports and encourages you to grow."</p>
-
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <CardTitle>Zachariah H</CardTitle>
-                  <CardDescription>
-                    Member, SE Club
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p>"Has been a great experience! The club has helped me grow as a developer and connect with like-minded individuals."</p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <CardTitle>Christopher G</CardTitle>
-                  <CardDescription>
-                    Secretary, SE Club
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p>"I have learned so much from the club and have made some amazing friends along the way."</p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
+        <Testimonials />
         <section id="join" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col items-center space-y-4 text-center">
