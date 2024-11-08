@@ -37,7 +37,7 @@ const Testimonials = () => {
             </Card>
             <Card>
               <CardHeader>
-                <CardTitle>Zachariah H</CardTitle>
+                <CardTitle>Zachariah D</CardTitle>
                 <CardDescription>
                 Member, SE Club
                 </CardDescription>
