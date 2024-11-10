@@ -26,7 +26,7 @@ npm i -g npm@latest</code>
 
 ---
 
-[@Zduroseau](https://github.com/Zduroseau) Hamburger Menu Added to Header
+11/10/2024 Header Section- [@Zduroseau](https://github.com/Zduroseau) Hamburger Menu Added
 
 ![second-club-PR-merge](/public/images/se-club-contribution-two.png)
 
