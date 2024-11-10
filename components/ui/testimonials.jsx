@@ -27,7 +27,7 @@ const Testimonials = () => {
                   Melissa E
                 </CardTitle>
                 <CardDescription>
-                  Vice President, SE Club
+                  Vice President
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -39,7 +39,7 @@ const Testimonials = () => {
               <CardHeader>
                 <CardTitle>Zachariah D</CardTitle>
                 <CardDescription>
-                Member, SE Club
+                Member
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -50,7 +50,7 @@ const Testimonials = () => {
               <CardHeader>
                 <CardTitle>Christopher G</CardTitle>
                 <CardDescription>
-                Secretary, SE Club
+                Secretary
                 </CardDescription>
               </CardHeader>
               <CardContent>
