@@ -9,49 +9,12 @@ import Link from "next/link";
 import Testimonials from "@/components/ui/testimonials";
 import { NameField } from "@/components/ui/nameField";
 import { EmailField } from "@/components/ui/emailField";
+import Header from "@/components/ui/header";
 
 export default function Component() {
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="px-4 lg:px-6 h-14 flex items-center my-4">
-        <Link className="flex items-center justify-center" href="#">
-          <Image
-            src="/images/fsw-buc-logo.png"
-            width={64}
-            height={64}
-            alt="School Logo"
-          />
-          <span className="hidden md:inline-block lg:inline-block text-lg ml-2 font-bold">
-            Software Engineering Club
-          </span>
-        </Link>
-        <nav className="ml-auto flex flex-row items-center gap-4 sm:gap-6 md:gap-8">
-          <Link
-            className="text-lg font-medium hover:underline underline-offset-4"
-            href="#about"
-          >
-            About
-          </Link>
-          <Link
-            className="text-lg font-medium hover:underline underline-offset-4"
-            href="#events"
-          >
-            Events
-          </Link>
-          <Link
-            className="text-lg font-medium hover:underline underline-offset-4"
-            href="#testimonials"
-          >
-            Testimonials
-          </Link>
-          <Link
-            className="text-lg font-medium hover:underline underline-offset-4"
-            href="#join"
-          >
-            Join
-          </Link>
-        </nav>
-      </header>
+      <Header />
       <main className="flex-1 bg-gradient-to-tr from-sky-500 to-violet-700">
         <section id="hero" className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
           <div className="container px-4 md:px-6 mx-auto">
