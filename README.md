@@ -25,6 +25,12 @@ npm i -g npm@latest</code>
 ![first-club-PR-merge](/public/images/se-club-contribution-one.png)
 
 ---
+
+[@Zduroseau](https://github.com/Zduroseau) Hamburger Menu Added to Header
+
+![second-club-PR-merge](/public/images/se-club-contribution-two.png)
+
+---
 Current version of app is now viewable from repo! 
 
 [Click Here!](https://se-club.vercel.app)
