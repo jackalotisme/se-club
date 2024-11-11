@@ -52,8 +52,21 @@ const EmailField = React.forwardRef(({ className, placeholder, changeParentState
             count++;
         }
         if (containsNonvalidChar) {
-            console.log("invalid character fix that!");
-
+            setErrorType('Invalid character.');
+            setErrorDescription("Invalid character in your email.");
+            changeParentState(false);
+        }
+        if (atSymbolCount > 1) {
+            setErrorType("Too many @'s");
+            setErrorDescription("You have too many error symbols, please consider removing one.");
+            changeParentState(false);
+            containsNonvalidChar = true;
+        }
+        if (atSymbolCount < 1) {
+            setErrorType("Required: @");
+            setErrorDescription("Your email requires a @");
+            changeParentState(false);
+            containsNonvalidChar = true;
         }
         return containsNonvalidChar;
     }
@@ -261,11 +274,6 @@ const EmailField = React.forwardRef(({ className, placeholder, changeParentState
                     setErrorType("Invalid Email Name");
                     changeParentState(false);
                 }
-            }
-            else {
-                setErrorDescription("Invalid characters, please check your email.");
-                setErrorType("Invalid Characters");
-                changeParentState(true);
             }
         }
         else {
