@@ -4,8 +4,6 @@ import About from "@/components/ui/about";
 import Events from "@/components/ui/events";
 import Footer from "@/components/ui/footer";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
-import Link from "next/link";
 import Testimonials from "@/components/ui/testimonials";
 import { NameField } from "@/components/ui/nameField";
 import { EmailField } from "@/components/ui/emailField";
