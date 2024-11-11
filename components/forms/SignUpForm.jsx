@@ -6,12 +6,15 @@ import { EmailField } from "../ui/emailField";
 import { Button } from "../ui/button";
 import { SubmitButton } from "../ui/submitButton";
 const SignUpForm = React.forwardRef((placeHolder, ref) => {
-    const { getValidForm, setValidForm } = useState(false);
+    const { ValidForm, setValidForm } = useState(false);
+    let submit = false;
     function changeState(TrueOrFalse) {
         if (TrueOrFalse === true) {
             setValidForm === false;
+            submit = false;
         } else {
             setValidForm === true;
+            submit = true
         }
     }
     return (
@@ -28,7 +31,9 @@ const SignUpForm = React.forwardRef((placeHolder, ref) => {
                         placeholder="Your Email"
                         required
                     ></EmailField>
-                    <SubmitButton>Submit</SubmitButton>
+
+                    <SubmitButton
+                        canSubmit={submit}>Submit</SubmitButton>
                 </form>
             </div>)
     );
