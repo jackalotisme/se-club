@@ -244,7 +244,6 @@ const EmailField = React.forwardRef(({ className, placeholder, changeParentState
                 //source for email list, this is before the @ sign 
                 //https://ladedu.com/valid-characters-for-email-addresses-the-complete-list/#Characters-Special-Characters-and-Symbols-Allowed-in-an-Email-Address
                 let test = text.split("@");
-                console.log(test);
                 let count = 0;
                 let element = test[0];
                 do {
@@ -255,20 +254,24 @@ const EmailField = React.forwardRef(({ className, placeholder, changeParentState
                     console.log("Valid Email Name")
                     setErrorDescription("");
                     setErrorType("");
+                    changeParentState(true);
                 }
                 else {
                     setErrorDescription("Invalid Email Name, please check your email.");
                     setErrorType("Invalid Email Name");
+                    changeParentState(false);
                 }
             }
             else {
                 setErrorDescription("Invalid characters, please check your email.");
                 setErrorType("Invalid Characters");
+                changeParentState(true);
             }
         }
         else {
             setErrorType("Length")
             setErrorDescription("Please type out the rest of the email, or try another email");
+            changeParentState(false);
         }
     }
     function handleChange(e) {
