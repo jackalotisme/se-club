@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { ErrorWindow } from "./errorWindow";
 import { useState } from "react";
 
-const EmailField = React.forwardRef(({ className, placeholder }, ref) => {
+const EmailField = React.forwardRef(({ className, placeholder, changeParentState }, ref) => {
     const [errorType, setErrorType] = useState("");
     const [errorDescription, setErrorDescription] = useState("");
     function checkInvalidCharacters(text) {
