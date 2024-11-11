@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import { NameField } from "../ui/nameField";
 import { EmailField } from "../ui/emailField";
 import { Button } from "../ui/button";
-
+import { SubmitButton } from "../ui/submitButton";
 const SignUpForm = React.forwardRef((placeHolder, ref) => {
     const { getValidForm, setValidForm } = useState(false);
     function changeState(TrueOrFalse) {
@@ -28,9 +28,7 @@ const SignUpForm = React.forwardRef((placeHolder, ref) => {
                         placeholder="Your Email"
                         required
                     ></EmailField>
-                    <Button type="submit" id="SignUp">
-                        Sign Up
-                    </Button>
+                    <SubmitButton>Submit</SubmitButton>
                 </form>
             </div>)
     );
