@@ -63,10 +63,13 @@ export default function Header() {
   }, [menuOpen]);
 
   return (
-    <header className="flex items-center justify-between p-4 relative">
+    <header className="px-4 lg:px-6 h-14 flex items-center my-4">
       {/* Logo Link */}
-      <Link href="#" aria-label="Go to homepage">
+      <Link className="flex items-center justify-center" href="#" aria-label="Go to homepage">
         <Image src="/images/fsw-buc-logo.png" width={64} height={64} alt="School Logo" />
+        <span className="hidden md:inline-block lg:inline-block text-lg ml-2 font-bold text-black">
+          Software Engineering Club
+        </span>
       </Link>
 
       {/* Mobile menu toggle button */}
