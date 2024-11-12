@@ -19,7 +19,8 @@ const SignUpForm = React.forwardRef((placeHolder, ref) => {
         compareBoth();
     }
     function compareBoth() {
-        if (ValidEmail === true && ValidName == true) {
+
+        if (ValidEmail === true && ValidName === true) {
             setSubmitStatus(true);
         }
         else {
