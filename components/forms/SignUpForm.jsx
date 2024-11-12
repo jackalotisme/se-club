@@ -51,7 +51,7 @@ const SignUpForm = React.forwardRef((placeHolder, ref) => {
                     ></EmailField>
 
                     <SubmitButton
-                        canSubmit={submit}>Submit</SubmitButton>
+                        canSubmit={GetSubmitStatus}>Submit</SubmitButton>
                 </form>
             </div>)
     );
