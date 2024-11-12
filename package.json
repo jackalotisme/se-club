@@ -19,7 +19,8 @@
     "react-dom": "^18",
     "react-router-dom": "^6.27.0",
     "tailwind-merge": "^2.5.3",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "v18": "^1.0.2"
   },
   "devDependencies": {
     "postcss": "^8",
