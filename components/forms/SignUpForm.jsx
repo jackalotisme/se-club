@@ -40,12 +40,12 @@ const SignUpForm = React.forwardRef((placeHolder, ref) => {
             <div className="w-full max-w-sm space-y-2">
                 <form className="flex flex-col space-y-4">
                     <NameField
-                        changeParentState={changeState}
+                        changeParentState={changeNameState}
                         placeholder="Your Name"
                         required
                     ></NameField>
                     <EmailField
-                        changeParentState={changeState}
+                        changeParentState={changeEmailState}
                         placeholder="Your Email"
                         required
                     ></EmailField>
