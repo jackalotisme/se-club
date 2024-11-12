@@ -83,7 +83,6 @@ const NameField = React.forwardRef(({ className, placeholder, changeParentState 
     }
     function handleChange(e) {
         let text = e.target.value;
-        console.log("this changed")
         validateText(text);
     }
     return (

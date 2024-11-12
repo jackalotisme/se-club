@@ -264,7 +264,6 @@ const EmailField = React.forwardRef(({ className, placeholder, changeParentState
                     count++;
                 } while (result === true && count < text[0].length);
                 if (result == true) {
-                    console.log("Valid Email Name")
                     setErrorDescription("");
                     setErrorType("");
                     changeParentState(true);
