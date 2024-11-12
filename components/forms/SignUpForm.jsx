@@ -9,7 +9,6 @@ const SignUpForm = React.forwardRef((placeHolder, ref) => {
     const [ValidName, setValidName] = useState(false);
     const [ValidEmail, setValidEmail] = useState(false);
     const [GetSubmitStatus, setSubmitStatus] = useState(false);
-    let submit = false;
 
     function changeNameState(TrueOrFalse) {
         if (TrueOrFalse === true) {
