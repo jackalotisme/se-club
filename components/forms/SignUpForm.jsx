@@ -6,7 +6,9 @@ import { EmailField } from "../ui/emailField";
 import { Button } from "../ui/button";
 import { SubmitButton } from "../ui/submitButton";
 const SignUpForm = React.forwardRef((placeHolder, ref) => {
-    const { ValidForm, setValidForm } = useState(false);
+    const [ValidName, setValidName] = useState(false);
+    const [ValidEmail, setValidEmail] = useState(false);
+    const [GetSubmitStatus, setSubmitStatus] = useState(false);
     let submit = false;
     function changeState(TrueOrFalse) {
         if (TrueOrFalse === true) {
