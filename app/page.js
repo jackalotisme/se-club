@@ -9,6 +9,8 @@ import Testimonials from "@/components/ui/testimonials";
 import { NameField } from "@/components/ui/nameField";
 import { EmailField } from "@/components/ui/emailField";
 import Header from "@/components/ui/header";
+import Employment from "@/components/ui/employment";
+
 
 export default function Component() {
   return (
@@ -38,6 +40,7 @@ export default function Component() {
         </section>
         <About />
         <Events />
+        <Employment />
         <FAQ />
         <Testimonials />
         <section id="join" className="w-full py-12 md:py-24 lg:py-32 bg-gray-50 dark:bg-gray-800">
