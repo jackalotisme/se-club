@@ -6,20 +6,18 @@ import { EmailField } from "../ui/emailField";
 import { Button } from "../ui/button";
 import { SubmitButton } from "../ui/submitButton";
 const SignUpForm = React.forwardRef((placeHolder, ref) => {
-    const [ValidName, setValidName] = useState(false);
-    const [ValidEmail, setValidEmail] = useState(false);
     const [GetSubmitStatus, setSubmitStatus] = useState(false);
-
+    let ValidName = false;
+    let ValidEmail = false;
     function changeNameState(TrueOrFalse) {
         if (TrueOrFalse === true) {
-            setValidName(true);
+            ValidName = true;
         } else {
-            setValidName(false);
+            ValidName = false;
         }
         compareBoth();
     }
     function compareBoth() {
-
         if (ValidEmail === true && ValidName === true) {
             setSubmitStatus(true);
         }
@@ -29,9 +27,9 @@ const SignUpForm = React.forwardRef((placeHolder, ref) => {
     }
     function changeEmailState(TrueOrFalse) {
         if (TrueOrFalse === true) {
-            setValidEmail(true);
+            ValidEmail = true;
         } else {
-            setValidEmail(false);
+            ValidEmail = false;
         }
         compareBoth();
     }
