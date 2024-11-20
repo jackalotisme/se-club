@@ -69,8 +69,7 @@ const NameField = React.forwardRef(({ className, placeholder, changeParentState 
                 changeParentState(false);
             }
             else {
-                setErrorType("Required")
-                // mixed on this message, how to make it not creepy but welcoming?
+                setErrorType("Required");
                 setErrorDescription("Your name is required");
                 changeParentState(false);
             }
