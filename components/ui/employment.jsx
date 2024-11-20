@@ -90,7 +90,7 @@ const Employment = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {randomCompanies.map((company) => (
             <div key={company.name} className="bg-white p-6 rounded-lg shadow-md">
-              <Image src={company.logo} alt={`${company.name} Logo`} width={50} height={50} className="mx-auto si mb-4" />
+              <Image src={company.logo} alt={`${company.name} Logo`} width={50} height={50} className="mx-auto my-2 si mb-4" />
               <h3 className="text-xl font-medium mb-2 text-center">{company.name}</h3>
               <Link className="flex items-center justify-center text-gray-600 text-sm text-center" href={company.recruitLink} aria-label="Find Your Career">
                 Explore career opportunities.
