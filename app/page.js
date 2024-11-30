@@ -16,8 +16,18 @@ export default function Component() {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      <main className="flex-1 bg-gradient-to-tr from-sky-500 to-violet-700">
-        <section id="hero" className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
+      <main className="relative flex-1 bg-gradient-to-tr from-sky-500 to-violet-700">
+        <section id="hero" className="relative h-full w-full py-12 md:py-24 lg:py-32 xl:py-48 overflow-hidden">
+          <video
+            className="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-50"
+            autoPlay
+            loop
+            muted
+            playsInline
+          >
+            <source src="https://videos.pexels.com/video-files/2278095/2278095-hd_1920_1080_30fps.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
           <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
