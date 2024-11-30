@@ -16,7 +16,7 @@ export default function Component() {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      <main className="relative flex-1 bg-gradient-to-tr from-sky-500 to-violet-700">
+      <main className="relative flex-1 bg-gradient-to-tr from-violet-700 to-blue-800">
         <section id="hero" className="relative h-full w-full py-12 md:py-24 lg:py-32 xl:py-48 overflow-hidden">
           <video
             className="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-50"
