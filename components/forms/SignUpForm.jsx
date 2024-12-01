@@ -22,6 +22,7 @@ const SignUpForm = React.forwardRef((placeHolder, ref) => {
         if (ValidEmail === true && ValidName === true) {
             result = true;
         }
+        return result;
     }
     function changeEmailState(TrueOrFalse) {
         if (TrueOrFalse === true) {
@@ -46,7 +47,7 @@ const SignUpForm = React.forwardRef((placeHolder, ref) => {
                     ></EmailField>
 
                     <SubmitButton
-                        canSubmit={GetSubmitStatus}>Submit</SubmitButton>
+                        canSubmit={compareBoth}>Submit</SubmitButton>
                 </form>
             </div>)
     );
