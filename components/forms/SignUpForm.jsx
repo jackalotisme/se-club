@@ -20,7 +20,7 @@ const SignUpForm = React.forwardRef((placeHolder, ref) => {
     function compareBoth() {
         let result = false;
         if (ValidEmail === true && ValidName === true) {
-            setSubmitStatus(true);
+            result = true;
         }
     }
     function changeEmailState(TrueOrFalse) {
