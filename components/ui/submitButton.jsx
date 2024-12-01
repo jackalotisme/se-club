@@ -5,7 +5,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
 const SubmitButton = React.forwardRef(({ className, placeholder, canSubmit }, ref) => {
-    if (canSubmit) {
+    if (canSubmit()) {
         return (
             (<><button
                 type="submit"
@@ -17,7 +17,7 @@ const SubmitButton = React.forwardRef(({ className, placeholder, canSubmit }, re
                 ref={ref}
                 id={"SignUp"}
                 disabled={false}
-                >Submit</button>
+            >Submit</button>
             </>
             )
         );
