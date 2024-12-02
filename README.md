@@ -31,6 +31,12 @@ npm i -g npm@latest</code>
 ![second-club-PR-merge](/public/images/se-club-contribution-two.png)
 
 ---
+
+11/10/2024 Conditional Submit- [@jackalotisme](https://github.com/jackalotisme) Submit Button, Error Window
+
+![third-club-PR-merge](/public/images/se-club-contribution-three.png)
+
+---
 Current version of app is now viewable from repo! 
 
 [Click Here!](https://se-club.vercel.app)

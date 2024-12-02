@@ -17,7 +17,7 @@ const Testimonials = () => {
       >
         <div className="container px-4 md:px-6 mx-auto">
 
-        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center text-black mb-8">
+        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8">
             Hear What Members Have To Say
         </h2>
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -32,7 +32,6 @@ const Testimonials = () => {
               </CardHeader>
               <CardContent>
                 <p>"There's no better feeling than being part of a community that supports and encourages you to grow."</p>
-
               </CardContent>
             </Card>
             <Card>
