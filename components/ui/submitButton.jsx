@@ -7,17 +7,17 @@ import { Button } from "@/components/ui/button";
 const SubmitButton = React.forwardRef(({ className, placeholder, canSubmit }, ref) => {
     if (canSubmit()) {
         return (
-            (<><button
+            (<><Button
                 type="submit"
                 className={cn(
-                    "z-10 bg-primary w-20 h-9 px-4 py-2 mx-auto text-primary-foreground shadow hover:bg-primary/90",
+                    "z-10 w-20 inline-flex mx-auto whitespace-nowrap rounded-md text-sm font-medium transition-colors",
                     className
                 )}
                 placeholder={placeholder}
                 ref={ref}
                 id={"SignUp"}
                 disabled={false}
-            >Submit</button>
+            >Submit</Button>
             </>
             )
         );
