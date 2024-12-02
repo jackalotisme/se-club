@@ -17,7 +17,7 @@ const SubmitButton = React.forwardRef(({ className, placeholder, canSubmit }, re
                 ref={ref}
                 id={"SignUp"}
                 disabled={false}
-            >Submit</Button>
+            >Sign Up</Button>
             </>
             )
         );
