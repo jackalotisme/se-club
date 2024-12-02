@@ -32,7 +32,7 @@ npm i -g npm@latest</code>
 
 ---
 
-11/10/2024 Conditional Submit- [@jackalotisme](https://github.com/jackalotisme) Hamburger Menu Added
+11/10/2024 Conditional Submit- [@jackalotisme](https://github.com/jackalotisme) Submit Button, Error Window
 
 ![third-club-PR-merge](/public/images/se-club-contribution-three.png)
 
