@@ -77,6 +77,7 @@ export default function Component() {
                   </p>
                 </div>
               <SignUpForm />
+              </div>
             </div>
           </section>
         </main>
