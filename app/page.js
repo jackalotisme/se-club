@@ -42,7 +42,7 @@ export default function Component() {
                   promote the practice of constructive collaboration.
                 </p>
               </div>
-              <div className="space-x-4">
+              <div className="z-10 space-x-4">
                 <Button>Join Now</Button>
                 <Button variant="outline">Learn More</Button>
               </div>
