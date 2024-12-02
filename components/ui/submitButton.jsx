@@ -10,7 +10,7 @@ const SubmitButton = React.forwardRef(({ className, placeholder, canSubmit }, re
             (<><button
                 type="submit"
                 className={cn(
-                    "z-10 bg-primary w-20 mx-auto text-primary-foreground shadow hover:bg-primary/90",
+                    "z-10 bg-primary w-20 h-9 px-4 py-2 mx-auto text-primary-foreground shadow hover:bg-primary/90",
                     className
                 )}
                 placeholder={placeholder}
