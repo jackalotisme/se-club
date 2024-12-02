@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { ErrorWindow } from "./errorWindow";
 import { useState } from "react";
 
-const EmailField = React.forwardRef(({ className, placeholder }, ref) => {
+const EmailField = React.forwardRef(({ className, placeholder, changeParentState }, ref) => {
     const [errorType, setErrorType] = useState("");
     const [errorDescription, setErrorDescription] = useState("");
     function checkInvalidCharacters(text) {
@@ -52,8 +52,21 @@ const EmailField = React.forwardRef(({ className, placeholder }, ref) => {
             count++;
         }
         if (containsNonvalidChar) {
-            console.log("invalid character fix that!");
-
+            setErrorType('Invalid character.');
+            setErrorDescription("Invalid character in your email.");
+            changeParentState(false);
+        }
+        if (atSymbolCount > 1) {
+            setErrorType("Too many @'s");
+            setErrorDescription("You have too many error symbols, please consider removing one.");
+            changeParentState(false);
+            containsNonvalidChar = true;
+        }
+        if (atSymbolCount < 1) {
+            setErrorType("Required: @");
+            setErrorDescription("Your email requires a @");
+            changeParentState(false);
+            containsNonvalidChar = true;
         }
         return containsNonvalidChar;
     }
@@ -244,7 +257,6 @@ const EmailField = React.forwardRef(({ className, placeholder }, ref) => {
                 //source for email list, this is before the @ sign 
                 //https://ladedu.com/valid-characters-for-email-addresses-the-complete-list/#Characters-Special-Characters-and-Symbols-Allowed-in-an-Email-Address
                 let test = text.split("@");
-                console.log(test);
                 let count = 0;
                 let element = test[0];
                 do {
@@ -252,23 +264,21 @@ const EmailField = React.forwardRef(({ className, placeholder }, ref) => {
                     count++;
                 } while (result === true && count < text[0].length);
                 if (result == true) {
-                    console.log("Valid Email Name")
                     setErrorDescription("");
                     setErrorType("");
+                    changeParentState(true);
                 }
                 else {
                     setErrorDescription("Invalid Email Name, please check your email.");
                     setErrorType("Invalid Email Name");
+                    changeParentState(false);
                 }
-            }
-            else {
-                setErrorDescription("Invalid characters, please check your email.");
-                setErrorType("Invalid Characters");
             }
         }
         else {
             setErrorType("Length")
             setErrorDescription("Please type out the rest of the email, or try another email");
+            changeParentState(false);
         }
     }
     function handleChange(e) {
@@ -276,15 +286,17 @@ const EmailField = React.forwardRef(({ className, placeholder }, ref) => {
         validateText(text);
     }
     return (
-        (<><Input
+        (<><input
             type="email"
             className={cn(
-                "flex h-9 w-full rounded-md border border-input bg-white px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50",
+                "flex z-10 h-9 w-full rounded-md border border-input bg-white px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50",
                 className
             )}
             ref={ref}
             placeholder={placeholder}
-            onChange={handleChange} />
+            onChange={handleChange}
+        />
+
             <ErrorWindow ErrorTitle={errorType}
                 ErrorDescription={errorDescription}></ErrorWindow>
         </>

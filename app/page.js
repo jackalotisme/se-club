@@ -8,6 +8,7 @@ import FAQ from "@/components/ui/faq";
 import Testimonials from "@/components/ui/testimonials";
 import { NameField } from "@/components/ui/nameField";
 import { EmailField } from "@/components/ui/emailField";
+import { SignUpForm } from "@/components/forms/SignUpForm";
 import Header from "@/components/ui/header";
 import Employment from "@/components/ui/employment";
 
@@ -72,18 +73,10 @@ export default function Component() {
                   </h2>
                   <p className="mx-auto max-w-[600px] md:text-xl dark:text-gray-400 text-white">
                     Be part of a community that's shaping the future of software
-                  engineering.
+                    engineering.
                   </p>
                 </div>
-                <div className="w-full max-w-sm space-y-2">
-                  <form className="flex flex-col space-y-4">
-                    <NameField placeholder="Your Name" required></NameField>
-                    <EmailField placeholder="Your Email" required></EmailField>
-                    <Button type="submit" id="SignUp">
-                    Sign Up
-                    </Button>
-                  </form>
-                </div>
+              <SignUpForm />
               </div>
             </div>
           </section>
