@@ -26,7 +26,7 @@ export default function Component() {
       <Header />
       <main className="relative flex-1 bg-gradient-to-tr from-violet-700 to-blue-800">
       <HeroSection />
-        <section id="hero" className="relative h-full w-full py-12 md:py-24 lg:py-32 xl:py-48 overflow-hidden">
+        {/* <section id="hero" className="relative h-full w-full py-12 md:py-24 lg:py-32 xl:py-48 overflow-hidden">
           <video
             className="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-50"
             autoPlay
@@ -56,7 +56,7 @@ export default function Component() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
         <About />
         <Events />
         <Employment />
