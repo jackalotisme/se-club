@@ -1,24 +1,32 @@
 "use client";
 
+import Header from "../components/ui/header"
+
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
+import { Code, Globe, Users } from "lucide-react"
+import Link from "next/link"
+import HeroSection from "@/components/ui/HeroSection";
 import About from "@/components/ui/about";
 import Events from "@/components/ui/events";
-import Footer from "@/components/ui/footer";
-import { Button } from "@/components/ui/button";
 import FAQ from "@/components/ui/faq";
 import Testimonials from "@/components/ui/testimonials";
 import { NameField } from "@/components/ui/nameField";
 import { EmailField } from "@/components/ui/emailField";
 import { SignUpForm } from "@/components/forms/SignUpForm";
-import Header from "@/components/ui/header";
+import Footer from "@/components/ui/footer";
 import Employment from "@/components/ui/employment";
 
+import MemberCard from "../components/ui/MemberCard";
 
 export default function Component() {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
       <main className="relative flex-1 bg-gradient-to-tr from-violet-700 to-blue-800">
-        <section id="hero" className="relative h-full w-full py-12 md:py-24 lg:py-32 xl:py-48 overflow-hidden">
+      <HeroSection />
+        {/* <section id="hero" className="relative h-full w-full py-12 md:py-24 lg:py-32 xl:py-48 overflow-hidden">
           <video
             className="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-50"
             autoPlay
@@ -48,7 +56,7 @@ export default function Component() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
         <About />
         <Events />
         <Employment />
