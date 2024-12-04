@@ -11,13 +11,13 @@ const SubmitButton = React.forwardRef(({ className, placeholder, canSubmit }, re
                 type="submit"
                 className={cn(
                     "z-10 w-40 inline-flex mx-auto whitespace-nowrap rounded-md text-sm font-medium transition-colors",
-                    className
-                )}
+                    className)}
                 placeholder={placeholder}
                 ref={ref}
                 id={"SignUp"}
-                disabled={false}
-            >Sign Up</Button>
+                disabled={false}>
+                Sign Up
+                </Button>
             </>
             )
         );
