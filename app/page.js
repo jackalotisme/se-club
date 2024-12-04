@@ -5,7 +5,7 @@ import Events from "@/components/ui/events";
 import Footer from "@/components/ui/footer";
 import { Button } from "@/components/ui/button";
 import Testimonials from "@/components/ui/testimonials";
-import { NameField } from "@/components/ui/nameField";
+import { NameField } from "@/components/ui/Fields/nameField";
 import { EmailField } from "@/components/ui/Fields/emailField";
 import { SignUpForm } from "@/components/forms/SignUpForm";
 import Header from "@/components/ui/header";
