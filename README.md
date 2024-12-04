@@ -1,6 +1,7 @@
 [![Next](https://img.shields.io/badge/NextJS-v15.0.2-blue.svg?logo=next.js)](https://nextjs.org)
 [![React](https://img.shields.io/badge/React-v18-teal.svg?logo=react)](https://react.dev)
 [![TailwindCSS](https://img.shields.io/badge/Tailwind%20CSS-v3.4.1-lightblue.svg?logo=tailwindcss)](https://nextjs.org)
+[![Sass](https://img.shields.io/badge/Sass-v1..81.0-pink.svg?logo=sass)](https://sass-lang.com/)
 
 ---
 
