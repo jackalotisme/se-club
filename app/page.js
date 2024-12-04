@@ -1,13 +1,13 @@
 "use client";
 
-import About from "@/components/ui/about";
-import Events from "@/components/ui/events";
+import About from "@/components/ui/Sections/about";
+import Events from "@/components/ui/Sections/events";
 import Footer from "@/components/ui/footer";
 import { Button } from "@/components/ui/button";
-import Testimonials from "@/components/ui/testimonials";
-import { NameField } from "@/components/ui/Fields/nameField";
-import { EmailField } from "@/components/ui/Fields/emailField";
-import { SignUpForm } from "@/components/forms/SignUpForm";
+import Testimonials from "@/components/ui/Sections/testimonials";
+import { NameField } from "@/components/formComponents/Fields/nameField";
+import { EmailField } from "@/components/formComponents/Fields/emailField";
+import { SignUpForm } from "@/components/formComponents/SignUpForm";
 import Header from "@/components/ui/header";
 
 export default function Component() {

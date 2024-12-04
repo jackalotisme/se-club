@@ -1,7 +1,7 @@
 import * as React from "react"
 
 import { cn } from "@/lib/utils"
-import { ErrorWindow } from "../../formComponents/errorWindow";
+import { ErrorWindow } from "../errorWindow";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
 

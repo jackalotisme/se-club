@@ -1,10 +1,10 @@
 import * as React from "react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
-import { NameField } from "../ui/Fields/nameField";
-import { EmailField } from "../ui/Fields/emailField";
+import { NameField } from "./Fields/nameField";
+import { EmailField } from "./Fields/emailField";
 import { Button } from "../ui/button";
-import { SubmitButton } from "../ui/submitButton";
+import { SubmitButton } from "./submitButton";
 const SignUpForm = React.forwardRef((placeHolder, ref) => {
     const [ValidName, setValidName] = useState(false);
     const [ValidEmail, setValidEmail] = useState(false);
