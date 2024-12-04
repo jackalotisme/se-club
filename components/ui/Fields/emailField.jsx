@@ -2,7 +2,7 @@ import * as React from "react"
 
 import { cn } from "@/lib/utils"
 import { Input } from "@/components/ui/input";
-import { ErrorWindow } from "./errorWindow";
+import { ErrorWindow } from "../errorWindow";
 import { useState } from "react";
 
 const EmailField = React.forwardRef(({ className, placeholder, changeParentState }, ref) => {

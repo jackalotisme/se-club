@@ -2,7 +2,7 @@ import * as React from "react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { NameField } from "../ui/nameField";
-import { EmailField } from "../ui/emailField";
+import { EmailField } from "../ui/Fields/emailField";
 import { Button } from "../ui/button";
 import { SubmitButton } from "../ui/submitButton";
 const SignUpForm = React.forwardRef((placeHolder, ref) => {
