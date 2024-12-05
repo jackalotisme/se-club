@@ -1,5 +1,3 @@
-"use client";
-
 import Header from "../components/ui/header"
 import HeroSection from "@/components/ui/HeroSection";
 import About from "@/components/ui/about";
@@ -10,7 +8,7 @@ import Footer from "@/components/ui/footer";
 import Employment from "@/components/ui/employment";
 import Join from "@/components/ui/join";
 
-import MemberCard from "../components/ui/MemberCard";
+// import MemberCard from "../components/ui/MemberCard";
 
 export default function Component() {
   return (

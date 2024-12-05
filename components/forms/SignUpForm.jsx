@@ -5,6 +5,9 @@ import { NameField } from "../ui/nameField";
 import { EmailField } from "../ui/emailField";
 import { Button } from "../ui/button";
 import { SubmitButton } from "../ui/submitButton";
+
+"use client";
+
 const SignUpForm = React.forwardRef((placeHolder, ref) => {
     const [ValidName, setValidName] = useState(false);
     const [ValidEmail, setValidEmail] = useState(false);

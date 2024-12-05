@@ -54,9 +54,9 @@
 
   @for $i from 1 through $matrix-count {
     &:nth-child(#{$i}) {
-      --top-offset: #{random_range(0vh, 10000vh) / 100};
-      --fall-duration: #{random_range(6000, 12000s) / 1000};
-      --fall-delay: #{random_range(0, 10000s) / 1000};
+      --top-offset: #{calc(random_range(0vh, 10000vh) / 100)};
+      --fall-duration: #{calc(random_range(6000, 12000s) / 1000)};
+      --fall-delay: #{calc(random_range(0, 10000s) / 1000)};
       --left-offset: #{random_range(0%, 100%)};
     }
 
