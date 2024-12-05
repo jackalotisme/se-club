@@ -1,5 +1,3 @@
-'use client'
-
 import React, { useState } from 'react'
 import { CalendarIcon, Users, Home, Settings, PlusCircle, LogOut, Clock } from 'lucide-react'
 import { Calendar } from '@/components/ui/calendar'
