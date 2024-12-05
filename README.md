@@ -34,9 +34,16 @@ npm i -g npm@latest</code>
 
 ---
 
-11/10/2024 Conditional Submit- [@jackalotisme](https://github.com/jackalotisme) Submit Button, Error Window
+11/10/2024 Submit Button, Error Window- [@jackalotisme](https://github.com/jackalotisme) Conditional Submit
 
 ![third-club-PR-merge](/public/images/se-club-contribution-three.png)
+
+---
+
+12/02/2024 Hero Section- [@luna-enamorada](https://github.com/luna-enamorada) Sass Utilization and Animation
+
+![fourth-club-PR-merge](https://github.com/user-attachments/assets/72636b5b-f7c0-4109-9eeb-716844cf86c2)
+
 
 ---
 Current version of app is now viewable from repo! 
