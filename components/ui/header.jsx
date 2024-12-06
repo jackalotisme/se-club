@@ -103,6 +103,14 @@ export default function Header() {
         </button>
 
         <div className="flex flex-col justify-center items-center h-full">
+        <Link
+            href="#"
+            className="block p-4 text-lg"
+            onClick={(e) => handleSmoothScroll(e, 'admin-page')}
+            aria-label="Navigate to Admin Page"
+          >
+            Admin Page
+          </Link>
           <Link
             href="#about"
             className="block p-4 text-lg"
@@ -120,20 +128,20 @@ export default function Header() {
             Events
           </Link>
           <Link
-            href="#join"
-            className="block p-4 text-lg"
-            onClick={(e) => handleSmoothScroll(e, 'join')}
-            aria-label="Navigate to Join Us section"
-          >
-            Join Us
-          </Link>
-          <Link
             href="#testimonials"
             className="block p-4 text-lg"
             onClick={(e) => handleSmoothScroll(e, 'testimonials')}
             aria-label="Navigate to Testimonials section"
           >
             Testimonials
+          </Link>
+          <Link
+            href="#join"
+            className="block p-4 text-lg"
+            onClick={(e) => handleSmoothScroll(e, 'join')}
+            aria-label="Navigate to Join Us section"
+          >
+            Join Us
           </Link>
         </div>
       </nav>
