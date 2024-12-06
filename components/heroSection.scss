@@ -71,7 +71,7 @@
       animation: blink 2s linear infinite;
     }
       
-      &::after {
+    &::after {
       position: absolute;
       content: "0101100";
       bottom: 100%;
@@ -84,10 +84,8 @@
       opacity: 0.5;
       z-index: -1; 
       animation: switch-character 3s steps(1) infinite, blink 2s linear infinite; 
-      
+    }
   }
-  }
-
 }
 
 @keyframes fall {

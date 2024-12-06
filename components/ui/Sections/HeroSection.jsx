@@ -2,10 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button"
 import "@/components/heroSection.scss"
 
-
 const MatrixEffect = ({particle}) => {
-// Toggle between "0" and "1" and update CSS accordingly
-// This will ensure each particle will have a unique pattern
+  // Toggle between "0" and "1" and update CSS accordingly
+  // This will ensure each particle will have a unique pattern
 
   const particles = Array.from({ length: particle }, () => ( Math.random() > 0.5 ? "0" : "1") );
   
@@ -34,9 +33,7 @@ const MatrixEffect = ({particle}) => {
   )
 }
 
-
 function HeroSection() {
-
   return (
     <div>
       <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 relative overflow-hidden">

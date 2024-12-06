@@ -17,8 +17,7 @@ const FAQ = () => {
           </h2>
           <Accordion type="single" collapsible className="w-full max-w-3xl mx-auto">
             <AccordionItem value="item-1">
-              <AccordionTrigger>Who can join the Software Engineering Club?
-                </AccordionTrigger>
+              <AccordionTrigger>Who can join the Software Engineering Club?</AccordionTrigger>
               <AccordionContent>
                 Our club is open to all students interested in software engineering, regardless of their major or experience level. Whether you're a beginner looking to learn coding or an advanced programmer wanting to expand your skills, you're welcome to join!
               </AccordionContent>
