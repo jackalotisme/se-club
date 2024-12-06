@@ -5,6 +5,7 @@ import { NameField } from "./Fields/nameField";
 import { EmailField } from "./Fields/emailField";
 import { Button } from "../ui/button";
 import { SubmitButton } from "./submitButton";
+
 const SignUpForm = React.forwardRef((placeHolder, ref) => {
     const [ValidName, setValidName] = useState(false);
     const [ValidEmail, setValidEmail] = useState(false);
@@ -51,12 +52,15 @@ const SignUpForm = React.forwardRef((placeHolder, ref) => {
                         placeholder="Your Email"
                         required
                     ></EmailField>
-                    <input
+
+                    <Button
                         className={cn(
                             "flex h-9 w-full rounded-md border border-input mx-auto bg-red-500 px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
                         )}
                         type="reset" value="Reset"
-                        onClick={ResetState}></input>
+                        onClick={ResetState}>
+                    </Button>
+
                     <SubmitButton
                         canSubmit={compareBoth}>Submit</SubmitButton>
                 </form>
