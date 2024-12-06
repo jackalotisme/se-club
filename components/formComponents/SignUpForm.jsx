@@ -10,6 +10,7 @@ const SignUpForm = React.forwardRef((placeHolder, ref) => {
   const [ValidName, setValidName] = useState(false);
   const [ValidEmail, setValidEmail] = useState(false);
   const [GetSubmitStatus, setSubmitStatus] = useState(false);
+  
 
   function changeNameState(TrueOrFalse) {
     if (TrueOrFalse === true) {
@@ -55,7 +56,9 @@ const SignUpForm = React.forwardRef((placeHolder, ref) => {
           required
         ></EmailField>
         <div className="flex flex-row space-x-4 mx-auto">
-          <SubmitButton canSubmit={compareBoth}>
+          <SubmitButton 
+            canSubmit={compareBoth}
+          >
             Submit
           </SubmitButton>
           <Button
