@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from 'react'
 import { CalendarIcon, Users, Home, Settings, PlusCircle, LogOut, Clock } from 'lucide-react'
 import { Calendar } from '@/components/ui/calendar'
@@ -55,7 +57,6 @@ const generateTimeOptions = () => {
 
 const timeOptions = generateTimeOptions()
 
-"use client";
 export default function AdminDashboard() {
   const [date, setDate] = useState(new Date())
   const [events, setEvents] = useState([])
