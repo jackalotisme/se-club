@@ -1,8 +1,7 @@
 import * as React from "react"
 
 import { cn } from "@/lib/utils"
-import { ErrorWindow } from "./errorWindow";
-import { Input } from "@/components/ui/input";
+import { ErrorWindow } from "../errorWindow";
 import { useState } from "react";
 
 const NameField = React.forwardRef(({ className, placeholder, changeParentState }, ref) => {

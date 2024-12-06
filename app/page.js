@@ -1,14 +1,14 @@
 "use client";
 
-import Header from "../components/ui/header"
-import HeroSection from "@/components/ui/HeroSection";
-import About from "@/components/ui/about";
-import Events from "@/components/ui/events";
-import FAQ from "@/components/ui/faq";
-import Testimonials from "@/components/ui/testimonials";
+import Header from "@/components/ui/header";
 import Footer from "@/components/ui/footer";
-import Employment from "@/components/ui/employment";
-import Join from "@/components/ui/join";
+import About from "@/components/ui/Sections/about";
+import Events from "@/components/ui/Sections/events";
+import FAQ from "@/components/ui/Sections/faq";
+import Join from "@/components/ui/Sections/join";
+import Testimonials from "@/components/ui/Sections/testimonials";
+import HeroSection from "@/components/ui/Sections/HeroSection";
+import Employment from "@/components/ui/Sections/employment";
 
 // import MemberCard from "../components/ui/MemberCard";
 
