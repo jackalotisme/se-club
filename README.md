@@ -41,7 +41,7 @@ npm i -g npm@latest</code>
 
 12/02/2024 Hero Section- [@luna-enamorada](https://github.com/luna-enamorada) Sass Utilization and Animation
 
-![fourth-club-PR-merge](public\images\se-club-contribution-four.png)
+![fourth-club-PR-merge](/public\images\se-club-contribution-four.png)
 
 ---
 
