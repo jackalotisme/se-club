@@ -39,7 +39,7 @@ npm i -g npm@latest</code>
 
 ---
 
-12/05/2024 Submit Button, Error Window- [@jackalotisme](https://github.com/jackalotisme) Conditional Submit
+12/05/2024 Submit Button, Reset Button, Error Window- [@jackalotisme](https://github.com/jackalotisme) Conditional Submit
 
 ![third-club-PR-merge](/public/images/se-club-contribution-three.png)
 
