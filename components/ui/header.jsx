@@ -103,8 +103,8 @@ export default function Header() {
         </button>
 
         <div className="flex flex-col justify-center items-center h-full">
-        <Link
-            href="/admin/page"
+          <Link
+            href="/admin"
             className="block p-4 text-lg"
             aria-label="Navigate to Admin Dashboard page"
           >
