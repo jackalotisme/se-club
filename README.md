@@ -33,15 +33,15 @@ npm i -g npm@latest</code>
 
 ---
 
-11/10/2024 Submit Button, Error Window- [@jackalotisme](https://github.com/jackalotisme) Conditional Submit
-
-![third-club-PR-merge](/public/images/se-club-contribution-three.png)
-
----
-
 12/02/2024 Hero Section- [@luna-enamorada](https://github.com/luna-enamorada) Sass Utilization and Animation
 
 ![fourth-club-PR-merge](/public/images/se-club-contribution-four.png)
+
+---
+
+12/05/2024 Submit Button, Error Window- [@jackalotisme](https://github.com/jackalotisme) Conditional Submit
+
+![third-club-PR-merge](/public/images/se-club-contribution-three.png)
 
 ---
 
