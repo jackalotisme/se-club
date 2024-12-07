@@ -3,12 +3,11 @@
 [![Sass](https://img.shields.io/badge/Sass-v1.82.0-pink.svg?logo=sass)](https://sass-lang.com/)
 [![TailwindCSS](https://img.shields.io/badge/Tailwind%20CSS-v3.4.1-lightblue.svg?logo=tailwindcss)](https://nextjs.org)
 
-
 ---
 
 Getting Started:
 
-In your IDE, after opening a folder- 
+In your IDE, after opening a folder-
 
 <code>git clone https://github.com/cloudflips32/se-club.git
 npm i -g npm@latest</code>
@@ -42,10 +41,10 @@ npm i -g npm@latest</code>
 
 12/02/2024 Hero Section- [@luna-enamorada](https://github.com/luna-enamorada) Sass Utilization and Animation
 
-![fourth-club-PR-merge](https://github.com/user-attachments/assets/72636b5b-f7c0-4109-9eeb-716844cf86c2)
-
+![fourth-club-PR-merge](public\images\se-club-contribution-four.png)
 
 ---
-Current version of app is now viewable from repo! 
+
+Current version of app is now viewable from repo!
 
 [Click Here!](https://se-club.vercel.app)

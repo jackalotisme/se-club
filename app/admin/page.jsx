@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useState } from 'react'
-import { CalendarIcon, Users, Home, Settings, PlusCircle, LogOut, Clock } from 'lucide-react'
-import { Calendar } from '@/components/ui/calendar'
-import { Button } from '@/components/ui/button'
+import React, { useState } from 'react';
+import { CalendarIcon, Users, Home, Settings, PlusCircle, LogOut } from 'lucide-react';
+import { Calendar } from '@/components/ui/calendar';
+import { Button } from '@/components/ui/button';
 import {
   Table,
   TableBody,
@@ -11,7 +11,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '@/components/ui/table'
+} from '@/components/ui/table';
 import {
   Dialog,
   DialogContent,
@@ -20,17 +20,17 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@/components/ui/dialog'
-import { Input } from '@/components/ui/input'
-import { Label } from '@/components/ui/label'
-import { Textarea } from '@/components/ui/textarea'
+} from '@/components/ui/dialog';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Textarea } from '@/components/ui/textarea';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select"
+} from "@/components/ui/select";
 
 // Members API --------------------------------
 
@@ -40,49 +40,49 @@ const clubMembers = [
   { id: 3, name: 'Charlie Brown', email: 'charlie@example.com', role: 'Secretary', joinedAt: '2023-02-15' },
   { id: 4, name: 'Diana Ross', email: 'diana@example.com', role: 'Treasurer', joinedAt: '2023-03-01' },
   { id: 5, name: 'Ethan Hunt', email: 'ethan@example.com', role: 'Member', joinedAt: '2023-03-15' },
-]
+];
 
 // Generate time options
 
 const generateTimeOptions = () => {
-  const options = []
+  const options = [];
   for (let hour = 0; hour < 24; hour++) {
     for (let minute = 0; minute < 60; minute += 30) {
-      const time = `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}`
-      options.push(time)
+      const time = `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}`;
+      options.push(time);
     }
   }
-  return options
-}
+  return options;
+};
 
-const timeOptions = generateTimeOptions()
+const timeOptions = generateTimeOptions();
 
-export default function AdminDashboard() {
-  const [date, setDate] = useState(new Date())
-  const [events, setEvents] = useState([])
-  const [newEvent, setNewEvent] = useState({ title: '', description: '', time: '09:00', ampm: 'AM' })
+const AdminDashboard = () => {
+  const [date, setDate] = useState(new Date());
+  const [events, setEvents] = useState([]);
+  const [newEvent, setNewEvent] = useState({ title: '', description: '', time: '09:00', ampm: 'AM' });
 
   const handleAddEvent = () => {
     if (date && newEvent.title) {
-      const eventDateTime = new Date(date)
-      let [hours, minutes] = newEvent.time.split(':')
-      hours = parseInt(hours, 10)
+      const eventDateTime = new Date(date);
+      let [hours, minutes] = newEvent.time.split(':');
+      hours = parseInt(hours, 10);
       if (newEvent.ampm === 'PM' && hours !== 12) {
-        hours += 12
+        hours += 12;
       } else if (newEvent.ampm === 'AM' && hours === 12) {
-        hours = 0
+        hours = 0;
       }
-      eventDateTime.setHours(hours, parseInt(minutes, 10))
+      eventDateTime.setHours(hours, parseInt(minutes, 10));
 
       setEvents([...events, { 
         date: eventDateTime, 
         title: newEvent.title, 
         description: newEvent.description,
         time: `${newEvent.time} ${newEvent.ampm}`
-      }])
-      setNewEvent({ title: '', description: '', time: '09:00', ampm: 'AM' })
+      }]);
+      setNewEvent({ title: '', description: '', time: '09:00', ampm: 'AM' });
     }
-  }
+  };
 
   return (
     <div className="flex h-screen bg-gray-100">
@@ -245,5 +245,7 @@ export default function AdminDashboard() {
         </section>
       </main>
     </div>
-  )
-}
+  );
+};
+
+export default AdminDashboard;
