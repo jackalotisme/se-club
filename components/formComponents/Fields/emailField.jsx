@@ -8,6 +8,7 @@ import { useState } from "react";
 const EmailField = React.forwardRef(({ className, placeholder, changeParentState }, ref) => {
     const [errorType, setErrorType] = useState("");
     const [errorDescription, setErrorDescription] = useState("");
+    const [emailDomains, setEmailDomains] = useState([]);
     function checkInvalidCharacters(text) {
         /*, Less strict than name, whats allowed should be:
     special characters: ! _ =  except @ 
@@ -250,6 +251,15 @@ const EmailField = React.forwardRef(({ className, placeholder, changeParentState
         }
         return valid;
     }
+    /**
+     * Source of list: https://gist.github.com/ammarshah/f5c2624d767f91a7cbdc4e54db8dd0bf
+     * Checks that the name after a @ has its domain .com/.edu/org .etc
+     **/
+    function checkEmailDomain() {
+        setEmailDomains(JSON.parse("./emailDomains.json"));
+        console.log(emailDomains);
+        return false;
+    }
     function validateText(text) {
         if (text.length >= 4) {
             let result = checkInvalidCharacters(text);
@@ -263,10 +273,13 @@ const EmailField = React.forwardRef(({ className, placeholder, changeParentState
                     result = checkValidName(element[count]);
                     count++;
                 } while (result === true && count < text[0].length);
+
                 if (result == true) {
                     setErrorDescription("");
                     setErrorType("");
                     changeParentState(true);
+                    result = checkEmailDomain();
+
                 }
                 else {
                     setErrorDescription("Invalid Email Name, please check your email.");
