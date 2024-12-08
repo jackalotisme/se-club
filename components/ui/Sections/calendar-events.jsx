@@ -60,7 +60,7 @@ const CalendarAndEvents = () => {
         description: newEvent.description,
         time: `${newEvent.time} ${newEvent.ampm}`
       }])
-      setNewEvent({ title: '', description: '', time: '09:00', ampm: 'AM' })
+      setNewEvent({ title: '', description: '', time: '09:00', ampm: 'AM' })  
     }
   }
 
@@ -105,7 +105,9 @@ const CalendarAndEvents = () => {
             />
           </div>
           <div className="flex-1 md: flex flex-col">
-            <h3 className="text-lg font-medium mb-2">Events</h3>
+            {events.length > 0 && (
+              <h3 className="text-lg font-medium mb-2">Events</h3> )
+            }
             <ul className="space-y-2">
               {events.map((event, index) => (
                 <li key={index} className="bg-gray-100 p-2 rounded">

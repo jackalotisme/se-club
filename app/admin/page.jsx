@@ -79,9 +79,9 @@ export default function AdminDashboard() {
             aria-expanded={menuOpen ? 'true' : 'false'} // Update aria-expanded based on menu state
             aria-controls="mobile-menu" // Associating with the mobile menu
           >
-            <span className="block w-6 h-1 bg-black mb-1 mr-2 mt-3" />
-            <span className="block w-6 h-1 bg-black mb-1 mr-2" />
-            <span className="block w-6 h-1 bg-black mr-2" />
+            <span className="block w-6 h-1 bg-black ml-1 mb-1 mr-2 mt-3" />
+            <span className="block w-6 h-1 bg-black ml-1 mb-1 mr-2" />
+            <span className="block w-6 h-1 bg-black ml-1 mr-2" />
           </button>
 
           {/* Mobile Menu (Side menu) */}
@@ -141,7 +141,7 @@ export default function AdminDashboard() {
 
       {/* Main Content */}
       <main className="flex-1 p-8 overflow-y-auto">
-        <h1 className="text-3xl font-semibold text-center text-gray-800 mb-6">Admin Dashboard</h1>
+        <h1 className="text-3xl font-semibold text-center text-gray-800 mr-4 mb-6">Admin Dashboard</h1>
 
         <Members />
         <CalendarAndEvents />
