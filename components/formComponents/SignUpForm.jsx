@@ -1,10 +1,9 @@
 import * as React from "react";
 import { useState } from "react";
-import { cn } from "@/lib/utils";
 import { NameField } from "./Fields/nameField";
 import { EmailField } from "./Fields/emailField";
-import { Button } from "../ui/button";
 import { SubmitButton } from "./submitButton";
+import { ResetButton } from "./resetButton";
 
 const SignUpForm = React.forwardRef((placeHolder, ref) => {
   const [ValidName, setValidName] = useState(false);
@@ -13,34 +12,27 @@ const SignUpForm = React.forwardRef((placeHolder, ref) => {
   
 
   function changeNameState(TrueOrFalse) {
-    if (TrueOrFalse === true) {
-      setValidName(true);
-    } else {
-      setValidName(false);
-    }
+    TrueOrFalse === true ? setValidName(true) : setValidName(false);
+  }
+
+  function changeEmailState(TrueOrFalse) {
+    TrueOrFalse === true ? setValidEmail(true) : setValidEmail(false);
   }
 
   function compareBoth() {
     let result = false;
-    if (ValidEmail === true && ValidName === true) {
-      result = true;
-    }
+    ValidEmail === true && ValidName === true ? result = true : result = false;
     return result;
   }
 
-  function changeEmailState(TrueOrFalse) {
-    if (TrueOrFalse === true) {
-      setValidEmail(true);
-    } else {
-      setValidEmail(false);
-    }
-  }
+
 
   // For the reset button!
   function ResetState() {
     setValidName(false);
     setValidEmail(false);
   }
+
 
   return (
     <div className="w-full max-w-sm space-y-2">
@@ -61,16 +53,11 @@ const SignUpForm = React.forwardRef((placeHolder, ref) => {
           >
             Submit
           </SubmitButton>
-          <Button
-            className={cn(
-              "flex h-9 w-40 rounded-md border border-input mx-auto bg-red-500 px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
-            )}
-            type="reset"
-            value="Reset"
+          <ResetButton
             onClick={ResetState}
           >
             Reset
-          </Button>
+          </ResetButton>
         </div>
       </form>
     </div>

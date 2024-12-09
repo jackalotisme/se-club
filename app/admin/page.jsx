@@ -25,7 +25,6 @@ export default function AdminDashboard() {
 
   // Smooth scroll handler (Reusable function)
   const handleSmoothScroll = (e, targetId) => {
-    e.preventDefault(); // Prevent default anchor link behavior
     const targetElement = document.getElementById(targetId);
 
     if (targetElement) {
@@ -101,7 +100,7 @@ export default function AdminDashboard() {
 
             <div className="flex flex-col justify-center items-center h-full">
               <Link
-                href="#settings"
+                href="/"
                 className="block p-4 text-lg"
                 onClick={(e) => handleSmoothScroll(e, 'testimonials')}
                 aria-label="Navigate to Testimonials section"
@@ -112,10 +111,10 @@ export default function AdminDashboard() {
                 </div>
               </Link>
               <Link
-                href="/app/page"
+                href="/"
                 className="block p-4 text-lg"
-                onClick={(e) => handleSmoothScroll(e, 'join')}
-                aria-label="Navigate to Join Us section"
+                onClick={(e) => handleSmoothScroll(e, 'homepage')}
+                aria-label="Navigate to Home page"
               >
                 <div className="flex">
                   <LogOut className="w-5 h-5 mt-1 mr-2" />
